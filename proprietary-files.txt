@@ -1,7 +1,7 @@
 # Bluetooth
 bin/BCM4335_003.001.009.0025.0000_LGIT_TWCS-B221D_TESTONLY.hcd
 bin/BCM4339_003.001.009.0061.0312.hcd
-bin/BCM4339_003.001.009.0061.0314.hcd
+bin/BCM4339_003.001.009.0061.0349.hcd
 
 # FM Radio
 -framework/com.broadcom.fm.jar
@@ -52,7 +52,7 @@ bin/qmuxd
 bin/rfs_access
 bin/rmt_storage
 lib/libcnefeatureconfig.so
-lib/libconfigdb.so
+lib/libconfigdb.so:vendor/lib/libconfigdb.so
 lib/libmdmdetect.so
 lib/libril.so
 lib/libuicc.so
