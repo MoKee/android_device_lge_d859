@@ -21,7 +21,7 @@ $(call inherit-product-if-exists, vendor/lge/d859/d859-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml
+    device/lge/g3-common/configs/mixer_paths_bcm.xml:system/etc/mixer_paths.xml
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -30,18 +30,12 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    init.galbi.bt.sh \
-    init.galbi.bt_vendor.rc
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
-# WiFi
+# Wifi
 PRODUCT_PACKAGES += \
-    hostapd_default.conf \
     libnetcmdiface
 
 # NFC packages
