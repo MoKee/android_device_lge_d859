@@ -21,7 +21,7 @@ $(call inherit-product-if-exists, vendor/lge/d859/d859-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/mixer_paths_bcm.xml:system/etc/mixer_paths.xml
+    device/lge/g3duo-common/configs/mixer_paths_bcm.xml:system/etc/mixer_paths.xml
 
 # NFC
 PRODUCT_COPY_FILES += \
