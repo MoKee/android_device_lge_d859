@@ -20,11 +20,9 @@
 TARGET_OTA_ASSERT_DEVICE := g3,d856,d857,d858,d859
 
 # Bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/d859/bluetooth/vnd_g3.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d859/bluetooth
-
 BOARD_HAVE_BLUETOOTH_BCM := true
-
+BOARD_BLUEDROID_VENDOR_CONF := device/lge/d859/configs/vnd_g3.conf
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d859/bluetooth
 
 # Audio
 AUDIO_FEATURE_ENABLED_FM := true
@@ -67,6 +65,9 @@ WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+# FM
+TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # inherit from the proprietary version
 -include vendor/lge/d859/BoardConfigVendor.mk
