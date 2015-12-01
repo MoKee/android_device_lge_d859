@@ -34,6 +34,7 @@ TARGET_GLOBAL_CFLAGS += -DANDROID_MULTI_SIM
 TARGET_GLOBAL_CPPFLAGS += -DANDROID_MULTI_SIM
 
 # FM
+QCOM_FM_ENABLED := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Kernel
@@ -65,9 +66,6 @@ WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-# FM
-TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # inherit from the proprietary version
 -include vendor/lge/d859/BoardConfigVendor.mk
