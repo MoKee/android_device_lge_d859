@@ -21,6 +21,7 @@ $(call inherit-product-if-exists, vendor/lge/d859/d859-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
+    device/lge/g3-common/configs/audio/audio_platform_info_bcm.xml:system/etc/audio_platform_info.xml \
     device/lge/g3-common/configs/audio/mixer_paths_bcm.xml:system/etc/mixer_paths.xml
 
 # NFC
@@ -29,6 +30,11 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Dual-SIM init script
+PRODUCT_PACKAGES += \
+    init.dualsim.rc \
+    init.dualsim.sh
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -42,6 +48,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NfcNci \
     nfc_nci.pn54x.default
+
+# FM Radio
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
 
 # Get BCMDHD configs
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)

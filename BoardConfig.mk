@@ -26,6 +26,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Audio
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
+AUDIO_FEATURE_ENABLED_MULTIPLE_TUNNEL := true
 
 # QCRIL
 SIM_COUNT := 2
@@ -60,6 +61,10 @@ WIFI_DRIVER_FW_PATH_P2P := "/system/etc/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+#FM Radio
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
+TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # inherit from the proprietary version
 -include vendor/lge/d859/BoardConfigVendor.mk
